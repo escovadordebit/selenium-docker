@@ -34,7 +34,7 @@ def get_drive():
     }
 
     options.add_experimental_option("prefs", prefs)
-    #options.add_argument('--no-sandbox') # necessário para rodar nesta versao do chromedriver
+    options.add_argument('--no-sandbox') # necessário para rodar nesta versao do chromedriver
     options.add_argument('--disable-dev-shm-usage') # para nao falahar em paginas muito grandes
     options.add_argument('--ignore-certificate-errors') # ignorar erro de certificado
     options.add_argument("--lang=pt-BR") # definição de linguagem

@@ -10,11 +10,12 @@ RUN apt-get -y upgrade
 
 RUN apt-get -y install 	google-chrome-stable nano
 
-RUN mkdir /root/.ssh
 ENV TZ=America/Sao_Paulo
+
+COPY . /app
 WORKDIR /app
 
 RUN /usr/local/bin/python -m pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-ENTRYPOINT [ "python3 -u application.py" ]
+CMD python -u app.py
